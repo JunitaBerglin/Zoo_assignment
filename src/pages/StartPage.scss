@@ -1,0 +1,61 @@
+@use "/src/scss/mixins";
+.welcomeWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  padding: 100px 50px;
+
+  @include mixins.desktop {
+    width: 70%;
+  }
+
+  &__welcomeBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(128, 174, 173, 0.5);
+
+    &--title {
+      font-size: 6rem;
+      font-family: Calibri, "Trebuchet MS", sans-serif;
+
+      @include mixins.desktop {
+        font-size: 4rem;
+      }
+    }
+
+    &--welcome {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    &--desc {
+      width: 70%;
+      text-align: center;
+      font-size: 1.2em;
+      margin: 0 0;
+
+      @include mixins.desktop {
+        margin: 20px 0;
+        font-size: 1.5rem;
+      }
+    }
+
+    &--link {
+      width: 500px;
+      border: 1px solid #f2d793;
+      text-align: center;
+      padding: 20px 0px;
+      margin: 20px;
+      border-radius: 15px;
+      background-color: #daa520;
+      font-size: 1.5rem;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}
